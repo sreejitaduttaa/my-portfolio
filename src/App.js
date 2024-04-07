@@ -7,9 +7,12 @@ import Skills from "./components/sections/Skills";
 import Education from "./components/sections/Education";
 import StyledStarsCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
+import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/sections/Footer";
 
 const Body = styled.div`
-    background-color: ${({ theme }) => theme.bg};
+  background-color: ${({ theme }) => theme.bg};
   width: 100%;
   overflow-x: hidden;
   position: relative;
@@ -40,12 +43,22 @@ function App() {
           <StyledStarsCanvas />
           <AnimatePresence>
             <div>
+
               <Hero />
+
               <Wrapper>
                 <Skills />
               </Wrapper>
 
-              <Education />
+              <Projects/>
+
+              <Wrapper>
+                <Education />
+                <Contact />
+              </Wrapper>
+              <Footer/>
+
+
             </div>
           </AnimatePresence>
         </Body>
